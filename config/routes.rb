@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+    
+    get "/", to: "order_form#index" #cover "/" with no action or id
+    get "/(/:action(/:id))", to: "order_form"
+    post "/(/:action(/:id))", to: "order_data"
+    
+
+
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
