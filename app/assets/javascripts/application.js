@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+
+
+//=require angular-1.3.15.min.js
+//=require bootstrap.min.js
+//=require ui-bootstrap-0.14.3.min.js
+//=require bootstrap-datepicker.min.js

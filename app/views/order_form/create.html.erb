@@ -1,4 +1,6 @@
+
 <script src="/assets/order_create_controller"></script>
+    <link rel="stylesheet" type="text/css" src="/assets/stylesheets/dp.css">
 <div class="container" ng-app="create_app" ng-controller="create_controller">
 
     
@@ -12,79 +14,339 @@
         <div class="tab-content">
         <div role="tab-pane" class="tab-pane active well" id="customer">
             <h2 class="center-me">Customer Information</h2>
+            
+            
         <div class="row">
-        <input type="text" class="col-md-6 text" name="c_first_name" placeholder="First Name">
-        <input type="text" class="col-md-6 text" name="c_last_name" placeholder="Last Name">
-        <input type="text" class="col-md-6 text" name="c_address" placeholder="Address">
-        <input type="text" class="col-md-6 text" name="c_city" placeholder="City">
-        <input type="text" class="col-md-6 text" name="c_zip" placeholder="Zip">
-        <input type="text" class="col-md-6 text" name="c_state" placeholder="State">
-        <input type="text" class="col-md-6 text" name="c_telephone" placeholder="Telephone">
-        <input type="text" class="col-md-6 text" name="c_email" placeholder="Email">
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">First Name</span>
+                <input type="text" class="form-control text" name="c_first_name">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">last Name</span>
+                <input type="text" class="form-control text" name="c_last_name">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Address</span>
+                <input type="text" class="form-control text" name="c_address">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">City</span>
+                <input type="text" class="form-control text" name="c_city">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Zip</span>
+                <input type="text" class="form-control text" name="c_zip">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">State</span>
+                <input type="text" class="form-control text" name="c_state">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Telephone</span>
+                <input type="text" class="form-control text" name="c_telephone">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Email</span>
+                <input type="text" class="form-control text" name="c_email">
+            </div>
+        </div>
         </div>
             
             <hr>
             <h2 class="center-me">Reception Information</h2>
         <div class="row">
-        <input type="text" class="col-md-6 text" name="r_first_name" placeholder="First Name">
-        <input type="text" class="col-md-6 text" name="r_last_name" placeholder="Last Name">
-        <input type="text" class="col-md-6 text" name="r_address" placeholder="Address">
-        <input type="text" class="col-md-6 text" name="r_city" placeholder="City">
-        <input type="text" class="col-md-6 text" name="r_state" placeholder="State">
-        <input type="text" class="col-md-6 text" name="r_zip" placeholder="Zip">
-        <input type="text" class="col-md-6 text" name="r_telephone" placeholder="Telephone">
-        <input type="text" class="col-md-6 text" name="r_email" placeholder="Email">
-        <input type="text" class="col-md-6 text date" name="r_date" placeholder="Date">
-        <input type="text" class="col-md-6 text" name="r_time" placeholder="Time">
-        <input type="text" class="col-md-6 text" name="r_special_instructions" placeholder="Special Instructions">
-        <input type="text" class="col-md-6 text" name="r_package" placeholder="Package">
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">First Name</span>
+                <input type="text" class="form-control text" name="r_first_name">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Last Name</span>
+                <input type="text" class="form-control text" name="r_last_name">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Address</span>
+                <input type="text" class="form-control text" name="r_address">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">City</span>
+                <input type="text" class="form-control text" name="r_city">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">State</span>
+                <input type="text" class="form-control text" name="r_state">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Zip</span>
+                <input type="text" class="form-control text" name="r_zip">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Telephone</span>
+                <input type="text" class="form-control text" name="r_telephone">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Email</span>
+                <input type="text" class="form-control text" name="r_email">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Date</span>
+                <input type="text" class="form-control text date" name="r_date">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Time</span>
+                <input type="text" class="form-control text" name="r_time">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Number of Guests</span>
+                <select class="form-control text" ng-model="r_guests">
+                    <option ng-repeat="guest in guests" value="{{guest}}">{{guest}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Special Instructions</span>
+                <input type="text" class="form-control text" name="r_special_instructions">
+            </div>
+        </div>
+            
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Package</span>
+                <input type="text" class="form-control text" name="r_package">
+            </div>
+        </div>
         </div>
         </div>
         
         <div role="tab-pane" class="tab-pane well" id="consultant">
             <h2 class="center-me">Tier Options</h2>
-        <div class="row">            
-        <input type="text" class="col-md-4 text" name="t1_size" placeholder="Size">
-        <input type="text" class="col-md-4 text" name="t1_flavor" placeholder="Flavor">
-        <input type="text" class="col-md-4 text" name="t1_filling" placeholder="Filling">
+        <div class="row" id="t1">      
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Size</span>
+                <select class="form-control text" ng-model="t1_size">
+                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                </select>
+            </div>
         </div>
-            <hr>
-        <div class="row">
-        <input type="text" class="col-md-4 text" name="t2_size" placeholder="Size">
-        <input type="text" class="col-md-4 text" name="t2_flavor" placeholder="Flavor">
-        <input type="text" class="col-md-4 text" name="t2_filling" placeholder="Filling">
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Flavor</span>
+                <select class="form-control text" ng-model="t1_flavor">
+                    <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
+                </select>
+            </div>
         </div>
-            <hr>
-        <div class="row">
-        <input type="text" class="col-md-4 text" name="t3_size" placeholder="Size">
-        <input type="text" class="col-md-4 text" name="t3_flavor" placeholder="Flavor">
-        <input type="text" class="col-md-4 text" name="t3_filling" placeholder="Filling">
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Filling</span>
+                <select class="form-control text" ng-model="t1_filling">
+                    <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
+                </select>
+            </div>
         </div>
-            <hr>
-        <div class="row">
-        <input type="text" class="col-md-4 text" name="t4_size" placeholder="Size">
-        <input type="text" class="col-md-4 text" name="t4_flavor" placeholder="Flavor">
-        <input type="text" class="col-md-4 text" name="t4_filling" placeholder="Filling">
         </div>
-            <hr>
-        <div class="row">
-        <input type="text" class="col-md-4 text" name="t5_size" placeholder="Size">
-        <input type="text" class="col-md-4 text" name="t5_flavor" placeholder="Flavor">
-        <input type="text" class="col-md-4 text" name="t5_filling" placeholder="Filling">
+
+        <div class="row" id="t2">
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Size</span>
+                <select class="form-control text" ng-model="t2_size">
+                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Flavor</span>
+                <select class="form-control text" ng-model="t2_flavor">
+                    <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Filling</span>
+                <select class="form-control text" ng-model="t2_filling">
+                    <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
+                </select>
+            </div>
+        </div>
+        </div>
+        <div class="row" id="t3">
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Size</span>
+                <select class="form-control text" ng-model="t3_size">
+                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Flavor</span>
+                <select class="form-control text" ng-model="t3_flavor">
+                    <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Filling</span>
+                <select class="form-control text" ng-model="t3_filling">
+                    <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
+                </select>
+            </div>
+        </div>
+        </div>
+
+        <div class="row" id="t4">
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Size</span>
+                <select class="form-control text" ng-model="t4_size">
+                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Flavor</span>
+                <select class="form-control text" ng-model="t4_flavor">
+                    <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Filling</span>
+                <select class="form-control text" ng-model="t4_filling">
+                    <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
+                </select>
+            </div>
+        </div>
+        </div>
+
+        <div class="row" id="t5">
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Size</span>
+                <select class="form-control text" ng-model="t5_size">
+                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Flavor</span>
+                <select class="form-control text" ng-model="t5_flavor">
+                    <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%">Filling</span>
+                <select class="form-control text" ng-model="t5_filling">
+                    <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
+                </select>
+            </div>
+        </div>
         </div>
         
             <hr>
             <h2 class="center-me">Cake Pricing</h2>
         <div class="row">
-        <input type="text" class="col-md-6 text" name="base_price" placeholder="Base Price">
-        <input type="text" class="col-md-6 text" name="flower_price" placeholder="Flower Price">
-        <input type="text" class="col-md-6 text" name="rolled_chocolate" placeholder="Rolles Chocolate Price">
-        <input type="text" class="col-md-6 text" name="tiering_price" placeholder="Tiering Price">
-        <input type="text" class="col-md-6 text" name="delivery_price" placeholder="Delivery Price">
-        <input type="text" class="col-md-6 text" name="balance" placeholder="Balance">
-        <input type="text" class="col-md-6 text" name="deposit" placeholder="Deposit">
-        <input type="text" class="col-md-6 text" name="vendor_balance" placeholder="Vendor Balance">
-        <input type="text" class="col-md-6 text" name="consultant" placeholder="Consultant">
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">Base Price</span>
+                <input type="text" class="form-control text" name="base_price">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">Flower Price</span>
+                <input type="text" class="form-control text" name="flower_price">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">R/C Price</span>
+                <input type="text" class="form-control text" name="rolled_chocolate">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">Tiering Price</span>
+                <input type="text" class="form-control text" name="tiering_price">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">Delivery Price</span>
+                <input type="text" class="form-control text" name="delivery_price">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">Balance</span>
+                <input type="text" class="form-control text" name="balance">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">Deposit</span>
+                <input type="text" class="form-control text" name="deposit">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">Vendor Balance</span>
+                <input type="text" class="form-control text" name="vendor_balance">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%">
+                <span class="input-group-addon" style="width: 30%;">Consultant</span>
+                <input type="text" class="form-control text" name="consultant">
+            </div>
+        </div>
         </div>
         </div>
         </div>

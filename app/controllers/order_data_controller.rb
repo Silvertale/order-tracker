@@ -25,6 +25,7 @@ class OrderDataController < ApplicationController
         order.r_date = params["r_date"].downcase
         order.r_time = params["r_time"].downcase
         order.r_special_instructions = params["r_special_instructions"].downcase
+        order.r_guests = params["r_guests"].downcase
         order.r_package = params["r_package"].downcase
         
         order.t1_size = params["t1_size"].downcase
