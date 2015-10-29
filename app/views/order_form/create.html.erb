@@ -4,7 +4,7 @@
 <div class="container" ng-app="create_app" ng-controller="create_controller">
 
     
-    <form action="/create" method="POST">
+    <form action="create" method="post">
         <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>        
         
         <ul class="nav nav-tabs" role="tablist">
@@ -20,49 +20,49 @@
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">First Name</span>
-                <input type="text" class="form-control text" name="c_first_name">
+                <input type="text" class="form-control text" ng-model="c_first_name" name="c_first_name" required>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
-                <span class="input-group-addon" style="width: 30%">last Name</span>
-                <input type="text" class="form-control text" name="c_last_name">
+                <span class="input-group-addon" style="width: 30%">Last Name</span>
+                <input type="text" class="form-control text" ng-model="c_last_name" name="c_last_name" required>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Address</span>
-                <input type="text" class="form-control text" name="c_address">
+                <input type="text" class="form-control text" ng-model="c_address" name="c_address" required>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">City</span>
-                <input type="text" class="form-control text" name="c_city">
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-6">
-            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
-                <span class="input-group-addon" style="width: 30%">Zip</span>
-                <input type="text" class="form-control text" name="c_zip">
+                <input type="text" class="form-control text" ng-model="c_city" name="c_city" required>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">State</span>
-                <input type="text" class="form-control text" name="c_state">
+                <input type="text" class="form-control text" ng-model="c_state" name="c_state" required>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="input-group" style="margin-bottom: 5px; width: 100%;">
+                <span class="input-group-addon" style="width: 30%">Zip</span>
+                <input type="text" class="form-control text" ng-model="c_zip" name="c_zip" required>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Telephone</span>
-                <input type="text" class="form-control text" name="c_telephone">
+                <input type="text" class="form-control text" ng-model="c_telephone" name="c_telephone" required>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Email</span>
-                <input type="text" class="form-control text" name="c_email">
+                <input type="text" class="form-control text" ng-model="c_email" name="c_email">
             </div>
         </div>
         </div>
@@ -73,67 +73,85 @@
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">First Name</span>
-                <input type="text" class="form-control text" name="r_first_name">
+                <input type="text" class="form-control text" ng-model="r_first_name" name="r_first_name">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Last Name</span>
-                <input type="text" class="form-control text" name="r_last_name">
+                <input type="text" class="form-control text" ng-model="r_last_name" name="r_last_name">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Address</span>
-                <input type="text" class="form-control text" name="r_address">
+                <input type="text" class="form-control text" ng-model="r_address" name="r_address">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">City</span>
-                <input type="text" class="form-control text" name="r_city">
+                <input type="text" class="form-control text" ng-model="r_city" name="r_city">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">State</span>
-                <input type="text" class="form-control text" name="r_state">
+                <input type="text" class="form-control text" ng-model="r_state" name="r_state">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Zip</span>
-                <input type="text" class="form-control text" name="r_zip">
+                <input type="text" class="form-control text" ng-model="r_zip" name="r_zip">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Telephone</span>
-                <input type="text" class="form-control text" name="r_telephone">
+                <input type="text" class="form-control text" ng-model="r_telephone" name="r_telephone">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Email</span>
-                <input type="text" class="form-control text" name="r_email">
+                <input type="text" class="form-control text" ng-model="r_email" name="r_email">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Date</span>
-                <input type="text" class="form-control text date" name="r_date">
+                <input type="text" class="form-control text date" ng-model="r_date" name="r_date">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Time</span>
-                <input type="text" class="form-control text" name="r_time">
+                <select type="text" class="form-control text" ng-model="r_time" name="r_time">
+                    <option value="5:00am">5:00am</option>
+                    <option value="6:00am">6:00am</option>
+                    <option value="7:00am">7:00am</option>
+                    <option value="8:00am">8:00am</option>
+                    <option value="9:00am">9:00am</option>
+                    <option value="10:00am">10:00am</option>
+                    <option value="11:00am">11:00am</option>
+                    <option value="12:00am">12:00am</option>
+                    <option value="1:00pm">1:00pm</option>
+                    <option value="2:00pm">2:00pm</option>
+                    <option value="3:00pm">3:00pm</option>
+                    <option value="4:00pm">4:00pm</option>
+                    <option value="5:00pm">5:00pm</option>
+                    <option value="6:00pm">6:00pm</option>
+                    <option value="7:00pm">7:00pm</option>
+                    <option value="8:00pm">8:00pm</option>
+
+                </select>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Number of Guests</span>
-                <select class="form-control text" ng-model="r_guests" ng-change="setGuests(r_guests)">
+                <select class="form-control text" ng-model="r_guests" ng-change="setGuests(r_guests)" name="r_guests">
                     <option ng-repeat="guest in guests" value="{{guest}}">{{guest}}</option>
                 </select>
             </div>
@@ -141,14 +159,14 @@
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Special Instructions</span>
-                <input type="text" class="form-control text" name="r_special_instructions">
+                <input type="text" class="form-control text" ng-model="r_special_instructions" name="r_special_instructions">
             </div>
         </div>
             
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Package</span>
-                <select type="text" class="form-control text" name="r_package" ng-model="r_package" ng-change="setPackage(r_package)" id="package-list">
+                <select type="text" class="form-control text" ng-model="package" ng-change="setPackage(package)" id="package-list" name="package">
                     <%= render 'order_form/vendor_list' %><!--render our vendors list partial-->
                 </select>
             </div>
@@ -166,8 +184,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
-                <select class="form-control text" ng-model="t1_size">
-                    <option value="" selected disabled></option>
+                <select class="form-control text" ng-model="t1_size" value="{{t1_size}}" name="t1_size">
                     <option ng-repeat="size in sizes" ng-selected="t1_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
@@ -175,7 +192,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Flavor</span>
-                <select class="form-control text" ng-model="t1_flavor">
+                <select class="form-control text" ng-model="t1_flavor" value="{{t1_flavor}}" name="t1_flavor">
                     <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
                 </select>
             </div>
@@ -183,7 +200,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Filling</span>
-                <select class="form-control text" ng-model="t1_filling">
+                <select class="form-control text" ng-model="t1_filling" value="{{t1_filling}}" name="t1_filling">
                     <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
                 </select>
             </div>
@@ -194,7 +211,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
-                <select class="form-control text" ng-model="t2_size">
+                <select class="form-control text" ng-model="t2_size" value="{{t2_size}}" name="t2_size">
                     <option ng-repeat="size in sizes" ng-selected="t2_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
@@ -202,7 +219,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Flavor</span>
-                <select class="form-control text" ng-model="t2_flavor">
+                <select class="form-control text" ng-model="t2_flavor" value="{{t2_flavor}}" name="t2_flavor">
                     <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
                 </select>
             </div>
@@ -210,7 +227,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Filling</span>
-                <select class="form-control text" ng-model="t2_filling">
+                <select class="form-control text" ng-model="t2_filling" value="{{t2_filling}}" name="t2_filling">
                     <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
                 </select>
             </div>
@@ -220,7 +237,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
-                <select class="form-control text" ng-model="t3_size">
+                <select class="form-control text" ng-model="t3_size" value="{{t3_size}}" name="t3_size">
                     <option ng-repeat="size in sizes" ng-selected="t3_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
@@ -228,7 +245,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Flavor</span>
-                <select class="form-control text" ng-model="t3_flavor">
+                <select class="form-control text" ng-model="t3_flavor" value="{{t3_flavor}}" name="t3_flavor">
                     <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
                 </select>
             </div>
@@ -236,7 +253,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Filling</span>
-                <select class="form-control text" ng-model="t3_filling">
+                <select class="form-control text" ng-model="t3_filling" value="{{t3_filling}}" name="t3_filling">
                     <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
                 </select>
             </div>
@@ -247,7 +264,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
-                <select class="form-control text" ng-model="t4_size">
+                <select class="form-control text" ng-model="t4_size" value="{{t4_size}}" name="t4_size">
                     <option ng-repeat="size in sizes" ng-selected="t4_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
@@ -255,7 +272,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Flavor</span>
-                <select class="form-control text" ng-model="t4_flavor">
+                <select class="form-control text" ng-model="t4_flavor" value="{{t4_flavor}}" name="t4_flavor">
                     <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
                 </select>
             </div>
@@ -263,7 +280,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Filling</span>
-                <select class="form-control text" ng-model="t4_filling">
+                <select class="form-control text" ng-model="t4_filling" value="{{t4_filling}}" name="t4_filling">
                     <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
                 </select>
             </div>
@@ -274,7 +291,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
-                <select class="form-control text" ng-model="t5_size">
+                <select class="form-control text" ng-model="t5_size" value="{{t5_size}}" name="t5_size">
                     <option ng-repeat="size in sizes" ng-selected="t5_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
@@ -282,7 +299,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Flavor</span>
-                <select class="form-control text" ng-model="t5_flavor">
+                <select class="form-control text" ng-model="t5_flavor" value="{{t5_flavor}}" name="t5_flavor">
                     <option ng-repeat="flavor in flavors" value="{{flavor}}">{{flavor}}</option>
                 </select>
             </div>
@@ -290,7 +307,7 @@
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Filling</span>
-                <select class="form-control text" ng-model="t5_filling">
+                <select class="form-control text" ng-model="t5_filling" value="{{t5_filling}}" name="t5_filling">
                     <option ng-repeat="filling in fillings" value="{{filling}}">{{filling}}</option>
                 </select>
             </div>
@@ -303,55 +320,58 @@
         <div class="col-md-6 col-sm-6" id="basePrice">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Base Price</span>
-                <input type="text" class="form-control text" name="base_price" value="{{base_price}}" disabled>
+                <input type="text" class="form-control text" ng-model="base_price" value="{{base_price}}" name="base_price">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Flower Price</span>
-                <input type="text" class="form-control text" name="flower_price">
+                <input type="text" class="form-control text" ng-model="flower_price" name="flower_price">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">R/C Price</span>
-                <input type="text" class="form-control text" name="rolled_chocolate">
+                <input type="text" class="form-control text" ng-model="rolled_chocolate_price" name="rolled_chocolate_price">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Tiering Price</span>
-                <input type="text" class="form-control text" name="tiering_price">
+                <input type="text" class="form-control text" ng-model="tiering_price" name="tiering_price">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Delivery Price</span>
-                <input type="text" class="form-control text" name="delivery_price">
+                <input type="text" class="form-control text" ng-model="delivery_price" name="delivery_price">
             </div>
         </div>
+    </div>
+            <hr style="border-bottom: 1px solid #DADADA;">
+        <div class="row">
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Balance</span>
-                <input type="text" class="form-control text" name="balance">
+                <input type="text" class="form-control text" ng-model="balance" name="balance">
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Deposit</span>
-                <input type="text" class="form-control text" name="deposit">
+                <input type="text" class="form-control text" ng-model="deposit" name="deposit">
             </div>
         </div>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-6 col-sm-6" hidden>
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Vendor Balance</span>
-                <input type="text" class="form-control text" name="vendor_balance">
+                <input type="text" class="form-control text" ng-model="vendor_balance" name="vendor_balance">
             </div>
         </div>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-6 col-sm-6" hidden>
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Consultant</span>
-                <input type="text" class="form-control text" name="consultant">
+                <input type="text" class="form-control text" ng-model="consultant" name="consultant">
             </div>
         </div>
         </div>

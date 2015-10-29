@@ -1,6 +1,6 @@
 var app = angular.module("create_app", ['ui.bootstrap']);
 
-app.controller("create_controller", function($scope){
+app.controller("create_controller", function($scope, $interval, $http){
   //look at package for show basePrice
   //Show only the number of tiers we are using
   //pre-assign tier sizes by r_people
@@ -10,23 +10,56 @@ app.controller("create_controller", function($scope){
     
     //when $scope.r_guests changes, update the tiering info by turning on or off id="t#"
     
-    $scope.t1_size = '10"';
-    $scope.t2_size = '10"';
-    $scope.t3_size = '10"';
-    $scope.t4_size = '10"';
-    $scope.t5_size = '10"';
+
     
-    $scope.t1_flavor = 'sgm';
-    $scope.t2_flavor = 'sgm';
-    $scope.t3_flavor = 'sgm';
-    $scope.t4_flavor = 'sgm';
-    $scope.t5_flavor = 'sgm';
-    
-    $scope.t1_filling = 'chocolate mousse';
-    $scope.t2_filling = 'chocolate mousse';
-    $scope.t3_filling = 'chocolate mousse';
-    $scope.t4_filling = 'chocolate mousse';
-    $scope.t5_filling = 'chocolate mousse';
+        $scope.c_first_name = "";
+        $scope.c_last_name = "";
+        $scope.c_address = "";
+        $scope.c_city = "";
+        $scope.c_zip = "";
+        $scope.c_state = "";
+        $scope.c_telephone = "";
+        $scope.c_email = "";
+        
+        $scope.r_first_name = "";
+        $scope.r_last_name = "";
+        $scope.r_address = "";
+        $scope.r_city = "";
+        $scope.r_state = "";
+        $scope.r_zip = "";
+        $scope.r_telephone = "";
+        $scope.r_email = "";
+        $scope.r_date = "";
+        $scope.r_time = "";
+        $scope.r_special_instructions = "";
+        $scope.r_guests = "";
+        $scope.package = "other";
+        
+        $scope.t1_size = "";
+        $scope.t1_flavor = "";
+        $scope.t1_filling = "";
+        $scope.t2_size = "";
+        $scope.t2_flavor = "";
+        $scope.t2_filling = "";
+        $scope.t3_size = "";
+        $scope.t3_flavor = "";
+        $scope.t3_filling = "";
+        $scope.t4_size = "";
+        $scope.t4_flavor = "";
+        $scope.t4_filling = "";
+        $scope.t5_size = "";
+        $scope.t5_flavor = "";
+        $scope.t5_filling = "";
+        
+        $scope.base_price = "";
+        $scope.flower_price = "";
+        $scope.rolled_chocolate_price = "";
+        $scope.tiering_price = "";
+        $scope.delivery_price = "";
+        $scope.balance = "";
+        $scope.deposit = "";
+        $scope.vendor_balance = "";
+        $scope.consultant = "";
 
 
     $scope.sizes = ['6"', '8"', '9"', '10"', '12"', '14"', '16"', '18"', '20"']
@@ -35,10 +68,6 @@ app.controller("create_controller", function($scope){
     $scope.tiering = [{people:"40", t1:'8"', t2:'12"', t3:'', t4:'', t5:'', show:2}, {people:'50', t1:'8"', t2:'14"', t3:'', t4:'', t5:'', show:2}, {people:'60', t1:'8"', t2:'16"', t3:'', t4:'', t5:'', show:2}, {people:'75', t1:'6"', t2:'10"', t3:'14"', t4:'', t5:'', show:3}, {people:'90', t1:'8"', t2:'12"', t3:'16"', t4:'', t5:'', show:3}, {people:'125', t1:'6"', t2:'9"', t3:'12"', t4:'16"', t5:'', show:4}, {people:'150', t1:'6"', t2:'10"', t3:'14"', t4:'18"', t5:'', show:4}, {poeple:'225', t1:'8"', t2:'12"', t3:'16"', t4:'20"', t5:'', show:4}, {people:'250', t1:'6"', t2:'9"', t3:'12"', t4:'16"', t5:'20"', show:5}, {people:'', t1:'', t2:'', t3:'', t4:'', t5:'', show:0}];
     
     $scope.guests = ['', '40', '50', '60', '75', '90', '125', '150', '225', '250'];//number of guests categories
-    $scope.r_guests = "";
-    $scope.base_price = "";
-    
-    $scope.r_package = "other";
 
     
     $scope.setGuests = function(){
@@ -79,7 +108,6 @@ app.controller("create_controller", function($scope){
             break;                
         }
         
-        console.log("selected model: " + JSON.stringify(model));
         
         $scope.t1_size = model.t1;
         $scope.t2_size = model.t2;
@@ -87,7 +115,6 @@ app.controller("create_controller", function($scope){
         $scope.t4_size = model.t4;
         $scope.t5_size = model.t5;
         
-        console.log("setting t1_size to: " + $scope.t1_size + ", and t2_size to: " + $scope.t2_size);
         
         $('#t1').hide();
         $('#t2').hide();
@@ -123,7 +150,7 @@ app.controller("create_controller", function($scope){
     }
     
         $scope.setPackage = function(){
-            if($scope.r_package != 'other'){
+            if($scope.package != 'other'){
                 $('#basePrice').hide();   
             }else{
                 $('#basePrice').show();   
@@ -135,6 +162,18 @@ app.controller("create_controller", function($scope){
         $('#t3').hide();
         $('#t4').hide();
         $('#t5').hide();
+    
+    $interval(function(){
+        
+        
+        if($scope.package != 'other'){//calculate the balance
+            $scope.balance = Math.round((Number($scope.flower_price) + Number($scope.rolled_chocolate_price) + Number($scope.tiering_price) + Number($scope.delivery_price))*100)/100; 
+        }else{
+            $scope.balance = Math.round((Number($scope.flower_price) + Number($scope.rolled_chocolate_price) + Number($scope.tiering_price) + Number($scope.delivery_price) + Number($scope.base_price))*100)/100;     
+        }
+    }, 1000);
+    
+
     
     
 });
