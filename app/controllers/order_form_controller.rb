@@ -12,6 +12,10 @@ class OrderFormController < ApplicationController
         render "order_form/create"
     end
     
+    def vendor_list
+        render "order_form/vendor_list" 
+    end
+    
 
     
     

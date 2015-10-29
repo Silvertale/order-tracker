@@ -36,9 +36,15 @@ app.controller("create_controller", function($scope){
     
     $scope.guests = ['', '40', '50', '60', '75', '90', '125', '150', '225', '250'];//number of guests categories
     $scope.r_guests = "";
+    $scope.base_price = "";
+    
+    $scope.r_package = "other";
 
     
     $scope.setGuests = function(){
+        
+        $scope.base_price = 3.50 * $scope.r_guests;
+        
         var model = {};
         switch($scope.r_guests){
             case '':
@@ -115,6 +121,14 @@ app.controller("create_controller", function($scope){
         }
         
     }
+    
+        $scope.setPackage = function(){
+            if($scope.r_package != 'other'){
+                $('#basePrice').hide();   
+            }else{
+                $('#basePrice').show();   
+            }
+        }
     
         $('#t1').hide();
         $('#t2').hide();

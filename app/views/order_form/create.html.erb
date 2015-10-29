@@ -148,7 +148,9 @@
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Package</span>
-                <input type="text" class="form-control text" name="r_package">
+                <select type="text" class="form-control text" name="r_package" ng-model="r_package" ng-change="setPackage(r_package)" id="package-list">
+                    <%= render 'order_form/vendor_list' %><!--render our vendors list partial-->
+                </select>
             </div>
         </div>
         </div>
@@ -298,10 +300,10 @@
             <hr>
             <h2 class="center-me">Cake Pricing</h2>
         <div class="row">
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-6 col-sm-6" id="basePrice">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%;">Base Price</span>
-                <input type="text" class="form-control text" name="base_price">
+                <input type="text" class="form-control text" name="base_price" value="{{base_price}}" disabled>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
