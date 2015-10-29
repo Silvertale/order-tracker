@@ -133,7 +133,7 @@
         <div class="col-md-6 col-sm-6">
             <div class="input-group" style="margin-bottom: 5px; width: 100%;">
                 <span class="input-group-addon" style="width: 30%">Number of Guests</span>
-                <select class="form-control text" ng-model="r_guests">
+                <select class="form-control text" ng-model="r_guests" ng-change="setGuests(r_guests)">
                     <option ng-repeat="guest in guests" value="{{guest}}">{{guest}}</option>
                 </select>
             </div>
@@ -156,12 +156,17 @@
         
         <div role="tab-pane" class="tab-pane well" id="consultant">
             <h2 class="center-me">Tier Options</h2>
+            <div class="alert alert-error" style="background-color: red;" id="guestWarning">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>Warning!</strong> Please select the number of guests!
+            </div>
         <div class="row" id="t1">      
         <div class="col-md-4 col-sm-4">
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
                 <select class="form-control text" ng-model="t1_size">
-                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                    <option value="" selected disabled></option>
+                    <option ng-repeat="size in sizes" ng-selected="t1_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
         </div>
@@ -188,7 +193,7 @@
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
                 <select class="form-control text" ng-model="t2_size">
-                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                    <option ng-repeat="size in sizes" ng-selected="t2_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
         </div>
@@ -214,7 +219,7 @@
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
                 <select class="form-control text" ng-model="t3_size">
-                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                    <option ng-repeat="size in sizes" ng-selected="t3_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
         </div>
@@ -241,7 +246,7 @@
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
                 <select class="form-control text" ng-model="t4_size">
-                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                    <option ng-repeat="size in sizes" ng-selected="t4_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
         </div>
@@ -268,7 +273,7 @@
             <div class="input-group" style="margin-bottom: 5px; width: 100%">
                 <span class="input-group-addon" style="width: 30%">Size</span>
                 <select class="form-control text" ng-model="t5_size">
-                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
+                    <option ng-repeat="size in sizes" ng-selected="t5_size==size" value="{{size}}">{{size}}</option>
                 </select>
             </div>
         </div>
