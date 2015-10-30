@@ -59,4 +59,38 @@ class OrderDataController < ApplicationController
         render(:text => "Saving order... result: " + confirmation.to_s)
     end
     
+    def search
+        query = {}
+        params.each_pair { |key, value|
+            if(value != "")
+                query[key] = value
+            end
+        }
+        query.delete "controller"
+        query.delete "action"
+        query.delete "authenticity_token"
+        
+        @order = Order.where(query)
+        puts @order.to_json
+        
+        render "order_form/show"
+        
+            
+    end
+    
+    def get
+        query = {}
+        params.each_pair { |key, value|
+            if(value != "")
+                query[key] = value
+            end
+        }
+        query.delete "controller"
+        query.delete "action"
+        query.delete "authenticity_token"
+        
+        @order = Order.where(query)
+        render :text => query.to_json
+    end
+    
 end

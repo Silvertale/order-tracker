@@ -16,6 +16,10 @@ class OrderFormController < ApplicationController
         render "order_form/vendor_list" 
     end
     
+    def update
+        render "order_form/update" 
+    end
+    
 
     
     

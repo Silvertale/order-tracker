@@ -16,6 +16,12 @@ select {
     border: 1px solid #EAEAEA;
 }
 
+.spacer-1 {
+    width: 10px;
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+}
  
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

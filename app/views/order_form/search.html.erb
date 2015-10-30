@@ -1,0 +1,15 @@
+<div class="container">
+    <form action="/search" method="post">
+        <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>  
+        <input type="text" name="c_first_name" placeholder="First Name">
+        <input type="text" name="c_last_name" placeholder="Last Name">
+        <input type="text" name="r_date" placeholder="Date" class="date">
+        <input type="submit" value="Search">
+    </form>
+    
+    <script>
+        window.onload = function(){
+            $('.date').datepicker();   
+        }
+    </script>
+</div>

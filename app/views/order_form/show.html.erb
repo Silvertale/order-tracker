@@ -1,0 +1,13 @@
+<div class="container">
+<% @order.each do |o| %>
+<div class="well">
+    <h2><%= o.c_first_name.titlecase %> <%= o.c_last_name.titlecase %></h2>
+    <div>Address: <%= o.c_address %> <% o.c_city %> <% o.c_state %></div>
+    <div>Price: <%= o.balance %></div>
+    <div>Paid: <%= o.deposit %></div>
+    <div>Owed: <%= o.balance.to_f - o.deposit.to_f %></div>
+
+    <div style="margin-top: 10px;"><a type="button" href="/update?id=<%= o.id %>" class="btn btn-success">Update</a><span class="spacer-1"></span><input type="button" class="btn btn-danger" value="Delete"></div>
+</div>
+<% end %>
+</div>
